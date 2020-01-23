@@ -5,12 +5,15 @@ import MenuItem from "material-ui/MenuItem";
 import axios from "axios";
 import ImagesResults from "../images-results/ImageResults";
 
+const API_KEY = process.env.REACT_APP_PIXABAY_API_KEY;
+
 class Search extends Component {
+
   state = {
     searchText: "",
     amount: 15,
     apiUrl: "https://pixabay.com/api",
-    apiKey: process.env.REACT_APP_API_APIKEY,
+    apiKey: API_KEY,
     images: []
   };
 
